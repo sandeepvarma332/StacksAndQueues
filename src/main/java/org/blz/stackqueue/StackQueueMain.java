@@ -4,21 +4,28 @@ import java.util.Scanner;
 
 
 public class StackQueueMain {
+    public static Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) {
 
-        public static Scanner sc = new Scanner(System.in);
+        System.out.print("Enter \n 1 to add element at the start  " +
+                " \n 2 to show the peek element"+
+                "\n 3 to pop all element"+
+                "\n choice: ");
 
-        public static void main(String[] args) {
+        switch (sc.nextInt()) {
+            case 1:
+                Operation.addelement();
+                break;
 
-            System.out.print("Enter \n 1 to add element at the start  " +
-                    "\n choice: ");
+            case 2:
+                Operation.peek();
+                break;
 
-            switch (sc.nextInt()) {
-                case 1:
-                    Operation.addelement();
-                    break;
-
-
-            }
+            case 3:
+                Operation.poptillempty();
+                break;
 
         }
+
     }
+}
