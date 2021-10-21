@@ -32,7 +32,19 @@ public class StackQueue {
             this.head = tempNode.next;
             temp=temp.next;
         }
+    }
 
+    public void queue(int data) {
+        Node newnode=new Node(data);
+        if (head == null) {
+            head = newnode;
+            tail = newnode;
+            top=head;
+        } else {
+            Node tempNode=tail;
+            this.tail=newnode;
+            tempNode.next=tail;
+        }
     }
 
     public void display(){
@@ -55,4 +67,7 @@ public class StackQueue {
         }
 
     }
+
+
 }
+
