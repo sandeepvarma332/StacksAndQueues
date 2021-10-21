@@ -3,9 +3,14 @@ package org.blz.stackqueue;
 
 public class Node
 {
-    public static void main( String[] args )
+    public int data;
+    public Node next;
 
-    {
-        System.out.println( "welcome to stack and queue" );
+
+
+    public Node(int data){
+        this.data=data;
+        this.next =null;
+
     }
 }
